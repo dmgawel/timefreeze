@@ -1,0 +1,8 @@
+{
+	"require": {
+		"slim/slim": "dev-master",
+        "slim/views": "dev-master",
+        "twig/twig": "1.15.*@dev",
+        "phpseclib/phpseclib": "dev-php5"
+	}
+}

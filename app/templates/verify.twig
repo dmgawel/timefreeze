@@ -1,0 +1,43 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div class="content-wrapper">
+	<div class="content">
+
+		{% if valid is defined %}
+			{% if valid %}
+				<h1 class="content-head is-center">Your certificate is <strong>valid</strong>!</h1>
+				<p class="is-center">This file was certified at {{ cert_date }}</p>
+			{% else %}
+				<h1 class="content-head is-center">Your certificate is <strong>not</strong> valid!</h1>
+			{% endif %}
+
+			<p class="is-center"><a href="{{ urlFor('verify') }}" class="pure-button pure-button-success button-xlarge">Verify another</a></p>
+		{% else %}
+
+		<h1 class="content-head is-center">Verify Time Certificate</h1>
+
+		<div class="pure-g">
+			<div class="pure-u-1-3"></div>
+			<form enctype="multipart/form-data" action="" method="POST" class="pure-form stamp-form pure-u-1-3">
+				<p>
+					<label for="file">Select your file:</label>
+					<input type="file" name="file" id="file" required>
+				</p>
+				<p>
+					<label for="file">Select your certificate:</label>
+					<input type="file" name="certificate" id="certificate" required>
+				</p>
+				<p>
+					<button type="submit" class="pure-button pure-button-primary button-xlarge">Verify</button>
+				</p>
+			</form>
+		</div>
+
+		{% endif %}
+
+	</div>
+</div>
+
+{% endblock %}
