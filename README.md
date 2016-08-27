@@ -4,7 +4,7 @@ Timefreeze is a simple PKI-based trusted timestamping system written as student 
 
 ## TODO
 
-[] Better README
-[] Rewrite it from scratch
-[] Create docs
-[] Generate hash of file on client-side
+- [ ] Better README
+- [ ] Rewrite it from scratch
+- [ ] Create docs
+- [ ] Generate hash of file on client-side
